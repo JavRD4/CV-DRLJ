@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Javier Durán Rodríguez - Portafolio de Ingeniería</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --accent: #11caa0;
+            --bg: #f8fafc;
+            --text-main: #334155;
+            --text-light: #64748b;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        header h2 {
+            margin: 10px 0 0 0;
+            font-size: 20px;
+            font-weight: 300;
+            color: #cbd5e1;
+        }
+        .container {
+            max-width: 1000px;
+            margin: -30px auto 40px auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 12px;
+        }
+        h3 {
+            color: var(--primary);
+            font-size: 24px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+        }
+        h3::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--secondary);
+            margin-right: 12px;
+            border-radius: 4px;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .card {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+            margin-bottom: 20px;
+        }
+        .card h4 {
+            margin: 0 0 10px 0;
+            color: var(--primary);
+            font-size: 18px;
+        }
+        .card span {
+            display: block;
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .skill-box {
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .skill-box strong {
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 5px;
+        }
+        .photo-placeholder {
+            text-align: center;
+            margin-top: -80px;
+            margin-bottom: 30px;
+        }
+        .photo-placeholder img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: #e2e8f0;
+        }
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .container { margin: 0; border-radius: 0; padding: 20px; }
+            header { padding: 40px 20px 80px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Luis Javier Durán Rodríguez</h1>
+    <h2>Estudiante de Ingeniería en Robótica Industrial</h2>
+</header>
+
+<div class="container">
+    <div class="photo-placeholder">
+        <img src="https://via.placeholder.com/160/cbd5e1/475569?text=Foto+Profesional" alt="Fotografía Profesional">
+    </div>
+
+    <p style="font-size: 18px; text-align: justify; color: #475569;">
+        Perfil polifacético con formación en Ingeniería en Robótica Industrial y experiencia en gestión operativa, optimización administrativa y atención especializada bajo metodologías de transparencia y eficiencia. Capacidad técnica avanzada para la integración de hardware y desarrollo de proyectos, respaldada por una destacada competencia analítica para la resolución de contingencias.
+    </p>
+
+    <h3>Formación Académica</h3>
+    <div class="card">
+        <h4>Ingeniería en Robótica Industrial</h4>
+        <span>Escuela Superior de Ingeniería Mecánica y Eléctrica (ESIME) | Instituto Politécnico Nacional (IPN)</span>
+        <ul>
+            <li><strong>Estado:</strong> Cursando actualmente.</li>
+        </ul>
+    </div>
+
+    <div class="grid-2">
+        <div>
+            <h3>Misión</h3>
+            <p>Aplicar de manera rigurosa los fundamentos de la ingeniería robótica, la automatización y la optimización de procesos para diseñar e implementar soluciones tecnológicas innovadoras que incrementen la eficiencia operativa y maximicen el rendimiento en el sector industrial y administrativo.</p>
+        </div>
+        <div>
+            <h3>Visión</h3>
+            <p>Consolidarme como un referente en la dirección de proyectos mecatrónicos y de automatización a gran escala, liderando la transición hacia entornos de la Industria 4.0 mediante la integración de sistemas inteligentes y la gestión de calidad.</p>
+        </div>
+    </div>
+
+    <h3>Experiencia Profesional y Operativa</h3>
+    <div class="card">
+        <h4>Auxiliar Operativo</h4>
+        <span>Tesorería de la CDMX | Mayo 2025 – Actualidad</span>
+        <ul>
+            <li>Asesoría y atención especializada a contribuyentes para el cumplimiento de obligaciones fiscales bajo normativas vigentes.</li>
+            <li>Gestión y seguimiento expedito de múltiples trámites administrativos, garantizando la reducción de tiempos de espera.</li>
+            <li>Resolución sistemática de incidencias operativas en ventanilla, aplicando principios de legalidad, máxima eficiencia y calidad.</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h4>Asistente de Oficina</h4>
+        <span>Empresa de Seguridad Privada | Enero 2020 – Mayo 2021</span>
+        <ul>
+            <li>Coordinación integral de actividades de soporte administrativo para asegurar la continuidad operativa de las oficinas.</li>
+            <li>Supervisión, monitoreo analítico y control técnico del sistema perimetral de videovigilancia.</li>
+            <li>Procesamiento de registros de pagos internos y mantenimiento de bases de datos operativas con precisión técnica.</li>
+        </ul>
+    </div>
+
+    <h3>Proyectos de Ingeniería</h3>
+    <div class="grid-2">
+        <div class="card">
+            <h4>Proyecto Rovertok (Unidad de Exploración Móvil)</h4>
+            <span>Desarrollo Técnico y Estructuración Estratégica</span>
+            <p>Diseño conceptual y arquitectónico de un rover de exploración. Elaboración integral del plan de viabilidad técnica mediante análisis estructurados, planeación de estrategias de manufactura en serie y estructuración de tablas detalladas de inversión de capital.</p>
+        </div>
+        <div class="card">
+            <h4>Proyecto Singbridge (Guante Interactivo)</h4>
+            <span>Integración Hardware-Software</span>
+            <p>Desarrollo de un guante técnico instrumentado con sensores para la captura de variables físicas. Diseño autónomo de la arquitectura operativa independiente del dispositivo y programación para una interfaz hombre-máquina precisa.</p>
+        </div>
+    </div>
+
+    <h3>Fortalezas y Debilidades</h3>
+    <div class="grid-2">
+        <div class="card">
+            <h4>Fortalezas</h4>
+            <ul>
+                <li>Pensamiento lógico-analítico para desglosar sistemas complejos y diagnosticar fallas.</li>
+                <li>Capacidad para trabajar bajo presión y mantener estándares óptimos de precisión en entornos de alta exigencia.</li>
+                <li>Adaptabilidad tecnológica acelerada para adoptar e integrar software y nuevos lenguajes.</li>
+            </ul>
+        </div>
+        <div class="card" style="border-left-color: #f59e0b;">
+            <h4>Debilidades (Área de Oportunidad)</h4>
+            <p>Mi trayectoria laboral inicial se ha consolidado principalmente dentro del sector gubernamental y administrativo, un área de oportunidad que actualmente compenso y nivelo activamente mediante el riguroso desarrollo técnico de proyectos prácticos de hardware y programación en la ingeniería.</p>
+        </div>
+    </div>
+
+    <h3>Matriz de Habilidades Técnicas</h3>
+    <div class="skills-grid">
+        <div class="skill-box">
+            <strong>Arquitectura y Diseño</strong>
+            C++, SQL, Entornos Visual Studio y Code::Blocks. Modelado 3D en SketchUp (VRML).
+        </div>
+        <div class="skill-box">
+            <strong>Gestión y Ofimática</strong>
+            Microsoft Excel, Word, PowerPoint y Publisher. Proyecciones financieras y bases de datos.
+        </div>
+        <div class="skill-box">
+            <strong>Documentación Técnica</strong>
+            Estructuración avanzada y rigor editorial de reportes técnicos utilizando LaTeX y Overleaf.
+        </div>
+        <div class="skill-box">
+            <strong>Edición y Multimedia</strong>
+            Procesamiento de imagen en Photoshop y postproducción de video técnico en Sony Vegas Pro.
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div>
+            <h3>Educación Continua</h3>
+            <ul>
+                <li><strong>Certificación CTRAC-01:</strong> Atención Ciudadana para Servidores Públicos. Optimización de procesos, legalidad y eficiencia procedimental (Acreditada en el primer periodo de 2026).</li>
+                <li><strong>Curso Formativo:</strong> El ABC de la igualdad y la no discriminación. Creación de entornos de trabajo inclusivos y normativos (Acreditado en mayo 2026).</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Competencias Lingüísticas</h3>
+            <ul>
+                <li><strong>Español:</strong> Nativo.</li>
+                <li><strong>Inglés:</strong> Nivel Básico (Lectura e interpretación de hojas de datos técnicos).</li>
+                <li><strong>Alemán:</strong> Nivel Básico.</li>
+                <li><strong>Japonés:</strong> Nivel Básico.</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

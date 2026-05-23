@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Javier Durán Rodríguez - CV</title>
+    <title>Luis Javier Durán Rodríguez - Portafolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -21,9 +21,13 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+        /* El Toque Diferente: Degradado en el encabezado */
         header {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
             color: white;
             padding: 60px 20px 80px 20px;
             text-align: center;
@@ -42,12 +46,14 @@
             color: #cbd5e1;
         }
         .container {
+            flex: 1;
             max-width: 1000px;
             margin: -30px auto 40px auto;
             background: white;
             padding: 50px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border-radius: 12px;
+            width: 90%;
         }
         h3 {
             color: var(--primary);
@@ -72,17 +78,18 @@
             grid-template-columns: 1fr 1fr;
             gap: 30px;
         }
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+        /* El Toque Diferente: Tarjetas interactivas */
         .card {
             background: #f1f5f9;
             padding: 20px;
             border-radius: 8px;
             border-left: 4px solid var(--secondary);
             margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
         .card h4 {
             margin: 0 0 10px 0;
@@ -92,7 +99,7 @@
         .card span {
             display: block;
             font-size: 14px;
-            color: var(--text-light);
+            color: var(--secondary);
             margin-bottom: 10px;
             font-weight: 600;
         }
@@ -116,13 +123,33 @@
             border: 6px solid white;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             background-color: #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+        .photo-placeholder img:hover {
+            transform: scale(1.05);
         }
         .alert-card {
             border-left-color: #f59e0b;
         }
+        /* El Pie de Página Académico */
+        footer {
+            background-color: var(--primary);
+            color: #cbd5e1;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: auto;
+            font-size: 14px;
+            border-top: 5px solid var(--accent);
+        }
+        footer strong {
+            color: white;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
         @media (max-width: 768px) {
-            .grid-2, .grid-3 { grid-template-columns: 1fr; }
-            .container { margin: 0; border-radius: 0; padding: 20px; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .container { padding: 20px; }
             header { padding: 40px 20px 80px 20px; }
         }
     </style>
@@ -131,7 +158,7 @@
 
 <header>
     <h1>Luis Javier Durán Rodríguez</h1>
-    <h2>Estudiante de Ingeniería en Robótica Industrial (ESIME - IPN)</h2>
+    <h2>Estudiante de Ingeniería en Robótica Industrial</h2>
 </header>
 
 <div class="container">
@@ -144,12 +171,12 @@
     </p>
 
     <div class="grid-2">
-        <div>
-            <h3>Misión</h3>
+        <div class="card">
+            <h4>Misión</h4>
             <p>Aplicar de manera rigurosa los fundamentos de la ingeniería robótica, la automatización y la optimización de procesos para diseñar e implementar soluciones tecnológicas innovadoras que incrementen la eficiencia operativa y maximicen el rendimiento en el sector industrial y administrativo.</p>
         </div>
-        <div>
-            <h3>Visión</h3>
+        <div class="card">
+            <h4>Visión</h4>
             <p>Consolidarme como un referente en la dirección de proyectos mecatrónicos y de automatización a gran escala, liderando la transición hacia entornos de la Industria 4.0 mediante la integración de sistemas inteligentes y la gestión de calidad.</p>
         </div>
     </div>
@@ -210,7 +237,7 @@
     </div>
 
     <h3>Intereses</h3>
-    <div class="card">
+    <div class="card" style="border-left-color: var(--accent);">
         <ul>
             <li><strong>Automatización e Industria 4.0:</strong> Diseño e integración de sistemas robóticos aplicados a la manufactura y la optimización de procesos.</li>
             <li><strong>Ecosistemas de Hardware Inteligente:</strong> Exploración de arquitecturas de dispositivos interconectados y tecnologías de usuario (IoT).</li>
@@ -219,29 +246,44 @@
         </ul>
     </div>
 
-    <h3>Experiencia en Proyectos (Laborales y Académicos)</h3>
+    <h3>Experiencia Laboral Operativa</h3>
     <div class="grid-2">
         <div class="card">
-            <h4>Auxiliar Operativo (Laboral)</h4>
+            <h4>Auxiliar Operativo</h4>
             <span>Tesorería de la CDMX | Mayo 2025 – Actualidad</span>
             <p>Asesoría especializada a contribuyentes para obligaciones fiscales, gestión expedita de trámites y resolución sistemática de incidencias operativas en ventanilla aplicando principios de legalidad.</p>
         </div>
         <div class="card">
-            <h4>Asistente de Oficina (Laboral)</h4>
+            <h4>Asistente de Oficina</h4>
             <span>Empresa de Seguridad Privada | Ene 2020 – May 2021</span>
             <p>Coordinación de soporte administrativo, monitoreo técnico de sistemas de videovigilancia y mantenimiento de bases de datos operativas con precisión técnica.</p>
         </div>
+    </div>
+
+    <h3>Proyectos Académicos y de Ingeniería</h3>
+    <div class="grid-2">
         <div class="card">
-            <h4>Proyecto Rovertok (Académico)</h4>
+            <h4>Proyecto Rovertok</h4>
             <span>Unidad de Exploración Móvil</span>
             <p>Diseño arquitectónico de un rover, elaborando el plan de viabilidad técnica, estrategias de manufactura en serie y estructuración de tablas detalladas de inversión.</p>
         </div>
         <div class="card">
-            <h4>Proyecto Singbridge (Académico)</h4>
+            <h4>Proyecto Singbridge</h4>
             <span>Guante Interactivo Sensorizado</span>
             <p>Desarrollo y programación de un guante técnico instrumentado con sensores. Diseño de arquitectura operativa independiente para una interfaz hombre-máquina precisa.</p>
         </div>
     </div>
 
-</div> </body>
+</div>
+
+<footer>
+    <p>
+        <strong>Portafolio Web Integrador</strong><br><br>
+        Desarrollado para la materia de Administración Industrial<br>
+        Escuela Superior de Ingeniería Mecánica y Eléctrica (ESIME)<br>
+        Instituto Politécnico Nacional • 2026
+    </p>
+</footer>
+
+</body>
 </html>

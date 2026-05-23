@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a;
-            --secondary: #2563eb;
-            --accent: #11caa0;
-            --bg: #f8fafc;
-            --text-main: #334155;
-            --text-light: #64748b;
+            --primary: #0f172a;       /* Pizarra oscuro */
+            --secondary: #7a1c33;     /* Guinda IPN elegante */
+            --accent: #9d2442;        /* Guinda brillante para detalles */
+            --bg: #f8fafc;            /* Fondo general claro */
+            --text-main: #334155;     /* Texto principal */
+            --text-light: #64748b;    /* Texto secundario */
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -25,21 +25,28 @@
             flex-direction: column;
             min-height: 100vh;
         }
+        /* Encabezado con patrón de cuadrícula tipo "Plano de Ingeniería" */
         header {
-            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
+            background-color: var(--primary);
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
             color: white;
-            padding: 60px 20px 80px 20px;
+            padding: 70px 20px 90px 20px;
             text-align: center;
-            border-bottom: 5px solid var(--accent);
+            border-bottom: 5px solid var(--secondary);
+            position: relative;
         }
         header h1 {
             margin: 0;
             font-size: 42px;
             font-weight: 800;
             letter-spacing: -1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         header h2 {
-            margin: 10px 0 0 0;
+            margin: 12px 0 0 0;
             font-size: 20px;
             font-weight: 300;
             color: #cbd5e1;
@@ -47,19 +54,21 @@
         .container {
             flex: 1;
             max-width: 1000px;
-            margin: -30px auto 40px auto;
+            margin: -40px auto 40px auto;
             background: white;
             padding: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
             border-radius: 12px;
             width: 90%;
+            position: relative;
+            z-index: 10;
         }
         h3 {
             color: var(--primary);
             font-size: 24px;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 10px;
-            margin-top: 40px;
+            margin-top: 45px;
             display: flex;
             align-items: center;
         }
@@ -78,19 +87,22 @@
             gap: 30px;
         }
         .card {
-            background: #f1f5f9;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--secondary);
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid var(--primary);
             margin-bottom: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
         }
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.06);
+            border-top-color: var(--secondary);
         }
         .card h4 {
-            margin: 0 0 10px 0;
+            margin: 0 0 12px 0;
             color: var(--primary);
             font-size: 18px;
         }
@@ -98,8 +110,10 @@
             display: block;
             font-size: 14px;
             color: var(--secondary);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         ul {
             padding-left: 20px;
@@ -110,33 +124,38 @@
         }
         .photo-placeholder {
             text-align: center;
-            margin-top: -80px;
+            margin-top: -90px;
             margin-bottom: 30px;
         }
         .photo-placeholder img {
-            width: 160px;
-            height: 160px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             object-fit: cover;
-            border: 6px solid white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 8px solid white;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
             background-color: #e2e8f0;
             transition: transform 0.3s ease;
         }
         .photo-placeholder img:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
+        /* Tarjeta de Debilidades (Neutral pero destacada) */
         .alert-card {
-            border-left-color: #f59e0b;
+            border-top-color: #64748b;
+            background-color: #f8fafc;
+        }
+        .alert-card:hover {
+            border-top-color: var(--primary);
         }
         footer {
             background-color: var(--primary);
-            color: #cbd5e1;
+            color: #94a3b8;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             margin-top: auto;
             font-size: 14px;
-            border-top: 5px solid var(--accent);
+            border-top: 5px solid var(--secondary);
         }
         footer strong {
             color: white;
@@ -146,8 +165,8 @@
         }
         @media (max-width: 768px) {
             .grid-2 { grid-template-columns: 1fr; }
-            .container { padding: 20px; }
-            header { padding: 40px 20px 80px 20px; }
+            .container { padding: 25px; margin-top: -30px; }
+            header { padding: 50px 20px 80px 20px; }
         }
     </style>
 </head>
@@ -163,7 +182,7 @@
         <img src="20250517_210103.jpg" alt="Fotografía Profesional">
     </div>
 
-    <p style="font-size: 18px; text-align: justify; color: #475569;">
+    <p style="font-size: 18px; text-align: justify; color: #475569; padding-bottom: 10px;">
         Estudiante de Ingeniería en Robótica Industrial con experiencia en atención al contribuyente y gestión administrativa en la Tesorería de la CDMX. Brindo orientación sobre obligaciones fiscales y apoyo en la realización de trámites, enfocado en ofrecer un servicio ágil, respetuoso y de calidad. A la par, integro mi formación académica aportando una sólida capacidad técnica para la integración de hardware, resolución analítica de problemas y el desarrollo estructurado de proyectos tecnológicos.
     </p>
 
@@ -234,7 +253,7 @@
     </div>
 
     <h3>Intereses</h3>
-    <div class="card" style="border-left-color: var(--accent);">
+    <div class="card">
         <ul>
             <li><strong>Automatización e Industria 4.0:</strong> Diseño e integración de sistemas robóticos aplicados a la manufactura y la optimización de procesos.</li>
             <li><strong>Ecosistemas de Hardware Inteligente:</strong> Exploración de arquitecturas de dispositivos interconectados y tecnologías de usuario (IoT).</li>
@@ -245,56 +264,5 @@
 
     <h3>Educación Continua y Certificaciones</h3>
     <div class="grid-2">
-        <div class="card" style="border-left-color: var(--accent);">
-            <h4>Certificación CTRAC-01</h4>
-            <span>Atención Ciudadana para Servidores Públicos | 2026</span>
-            <p>Acreditación oficial enfocada en la optimización de procesos, principios de legalidad y eficiencia procedimental en la atención directa al usuario.</p>
-        </div>
-        <div class="card" style="border-left-color: var(--accent);">
-            <h4>El ABC de la Igualdad y la No Discriminación</h4>
-            <span>Curso Formativo Institucional | Mayo 2026</span>
-            <p>Capacitación estratégica para la creación de entornos de trabajo inclusivos, éticos y apegados a las normativas de equidad actuales.</p>
-        </div>
-    </div>
-
-    <h3>Experiencia Laboral Operativa</h3>
-    <div class="grid-2">
         <div class="card">
-            <h4>Auxiliar Operativo</h4>
-            <span>Tesorería de la CDMX | Mayo 2025 – Actualidad</span>
-            <p>Asesoría especializada a contribuyentes para obligaciones fiscales, gestión expedita de trámites y resolución sistemática de incidencias operativas en ventanilla aplicando principios de legalidad.</p>
-        </div>
-        <div class="card">
-            <h4>Asistente de Oficina</h4>
-            <span>Empresa de Seguridad Privada | Ene 2020 – May 2021</span>
-            <p>Coordinación de soporte administrativo, monitoreo técnico de sistemas de videovigilancia y mantenimiento de bases de datos operativas con precisión técnica.</p>
-        </div>
-    </div>
-
-    <h3>Proyectos Académicos y de Ingeniería</h3>
-    <div class="grid-2">
-        <div class="card">
-            <h4>Proyecto Rovertok</h4>
-            <span>Unidad de Exploración Móvil</span>
-            <p>Diseño arquitectónico de un rover, elaborando el plan de viabilidad técnica, estrategias de manufactura en serie y estructuración de tablas detalladas de inversión.</p>
-        </div>
-        <div class="card">
-            <h4>Proyecto Singbridge</h4>
-            <span>Guante Interactivo Sensorizado</span>
-            <p>Desarrollo y programación de un guante técnico instrumentado con sensores. Diseño de arquitectura operativa independiente para una interfaz hombre-máquina precisa.</p>
-        </div>
-    </div>
-
-</div>
-
-<footer>
-    <p>
-        <strong>Portafolio Web Integrador</strong><br><br>
-        Desarrollado para la materia de Administración Industrial<br>
-        Escuela Superior de Ingeniería Mecánica y Eléctrica (ESIME)<br>
-        Instituto Politécnico Nacional • 2026
-    </p>
-</footer>
-
-</body>
-</html>
+            <h4>Certificación

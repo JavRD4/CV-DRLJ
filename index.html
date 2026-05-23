@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Javier Durán Rodríguez - Portafolio de Ingeniería</title>
+    <title>Luis Javier Durán Rodríguez - CV</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -43,7 +43,7 @@
         }
         .container {
             max-width: 1000px;
-            margin: -30px auto 20px auto;
+            margin: -30px auto 40px auto;
             background: white;
             padding: 50px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -72,6 +72,11 @@
             grid-template-columns: 1fr 1fr;
             gap: 30px;
         }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
         .card {
             background: #f1f5f9;
             padding: 20px;
@@ -98,21 +103,6 @@
         li {
             margin-bottom: 8px;
         }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .skill-box {
-            border: 1px solid #e2e8f0;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        .skill-box strong {
-            color: var(--secondary);
-            display: block;
-            margin-bottom: 5px;
-        }
         .photo-placeholder {
             text-align: center;
             margin-top: -80px;
@@ -127,44 +117,11 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             background-color: #e2e8f0;
         }
-        footer {
-            background-color: #f1f5f9;
-            padding: 40px 20px;
-            text-align: center;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 40px;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .contact-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-            text-decoration: none;
-            color: var(--text-main);
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-        }
-        .contact-card:hover {
-            border-color: var(--secondary);
-            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.1);
-            transform: translateY(-3px);
-        }
-        .contact-icon {
-            margin-right: 12px;
-            font-size: 20px;
+        .alert-card {
+            border-left-color: #f59e0b;
         }
         @media (max-width: 768px) {
-            .grid-2 { grid-template-columns: 1fr; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
             .container { margin: 0; border-radius: 0; padding: 20px; }
             header { padding: 40px 20px 80px 20px; }
         }
@@ -174,26 +131,17 @@
 
 <header>
     <h1>Luis Javier Durán Rodríguez</h1>
-    <h2>Estudiante de Ingeniería en Robótica Industrial</h2>
+    <h2>Estudiante de Ingeniería en Robótica Industrial (ESIME - IPN)</h2>
 </header>
 
 <div class="container">
     <div class="photo-placeholder">
-        <img src="20250517_210103.jpg" alt="Fotografía de Luis Javier Durán Rodríguez">
+        <img src="20250517_210103.jpg" alt="Fotografía Profesional">
     </div>
 
     <p style="font-size: 18px; text-align: justify; color: #475569;">
         Estudiante de Ingeniería en Robótica Industrial con experiencia en atención al contribuyente y gestión administrativa en la Tesorería de la CDMX. Brindo orientación sobre obligaciones fiscales y apoyo en la realización de trámites, enfocado en ofrecer un servicio ágil, respetuoso y de calidad. A la par, integro mi formación académica aportando una sólida capacidad técnica para la integración de hardware, resolución analítica de problemas y el desarrollo estructurado de proyectos tecnológicos.
     </p>
-
-    <h3>Formación Académica</h3>
-    <div class="card">
-        <h4>Ingeniería en Robótica Industrial</h4>
-        <span>Escuela Superior de Ingeniería Mecánica y Eléctrica (ESIME) | Instituto Politécnico Nacional (IPN)</span>
-        <ul>
-            <li><strong>Estado:</strong> Cursando actualmente.</li>
-        </ul>
-    </div>
 
     <div class="grid-2">
         <div>
@@ -206,116 +154,94 @@
         </div>
     </div>
 
-    <h3>Experiencia Profesional y Operativa</h3>
-    <div class="card">
-        <h4>Auxiliar Operativo</h4>
-        <span>Tesorería de la CDMX | Mayo 2025 – Actualidad</span>
-        <ul>
-            <li>Asesoría y atención especializada a contribuyentes para el cumplimiento de obligaciones fiscales bajo normativas vigentes.</li>
-            <li>Gestión y seguimiento expedito de múltiples trámites administrativos, garantizando la reducción de tiempos de espera.</li>
-            <li>Resolución sistemática de incidencias operativas en ventanilla, aplicando principios de legalidad, máxima eficiencia y calidad.</li>
-        </ul>
-    </div>
-    <div class="card">
-        <h4>Asistente de Oficina</h4>
-        <span>Empresa de Seguridad Privada | Enero 2020 – Mayo 2021</span>
-        <ul>
-            <li>Coordinación integral de actividades de soporte administrativo para asegurar la continuidad operativa de las oficinas.</li>
-            <li>Supervisión, monitoreo analítico y control técnico del sistema perimetral de videovigilancia.</li>
-            <li>Procesamiento de registros de pagos internos y mantenimiento de bases de datos operativas con precisión técnica.</li>
-        </ul>
-    </div>
-
-    <h3>Proyectos de Ingeniería</h3>
+    <h3>Perfil Integral</h3>
     <div class="grid-2">
         <div class="card">
-            <h4>Proyecto Rovertok (Unidad de Exploración Móvil)</h4>
-            <span>Desarrollo Técnico y Estructuración Estratégica</span>
-            <p>Diseño conceptual y arquitectónico de un rover de exploración. Elaboración integral del plan de viabilidad técnica mediante análisis estructurados, planeación de estrategias de manufactura en serie y estructuración de tablas detalladas de inversión de capital.</p>
+            <h4>Habilidades</h4>
+            <ul>
+                <li>Programación en lenguajes estructurados (C++, SQL).</li>
+                <li>Modelado y diseño asistido por computadora (SketchUp, VRML).</li>
+                <li>Edición técnica y maquetación de documentos científicos (LaTeX, Overleaf).</li>
+                <li>Procesamiento multimedia y edición de video.</li>
+            </ul>
         </div>
         <div class="card">
-            <h4>Proyecto Singbridge (Guante Interactivo)</h4>
-            <span>Integración Hardware-Software</span>
-            <p>Desarrollo de un guante técnico instrumentado con sensores para la captura de variables físicas. Diseño autónomo de la arquitectura operativa independiente del dispositivo y programación para una interfaz hombre-máquina precisa.</p>
+            <h4>Actitudes</h4>
+            <ul>
+                <li><strong>Ética e Inclusión:</strong> Trato empático y equitativo con orientación de servicio.</li>
+                <li><strong>Resiliencia:</strong> Perseverancia en el diagnóstico y corrección de fallas tecnológicas.</li>
+                <li><strong>Proactividad:</strong> Iniciativa para optimizar procesos repetitivos en entornos administrativos.</li>
+                <li><strong>Aprendizaje Continuo:</strong> Adaptabilidad rápida a nuevos ecosistemas de hardware.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h4>Conocimientos</h4>
+            <ul>
+                <li>Fundamentos de cinemática y dinámica aplicada a la robótica.</li>
+                <li>Electrónica analógica, instrumentación y captura de variables físicas mediante sensores.</li>
+                <li>Normativas de atención ciudadana y trámites fiscales gubernamentales.</li>
+                <li>Manejo avanzado de ofimática y gestión de bases de datos operativas.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h4>Competencias</h4>
+            <ul>
+                <li><strong>Resolución de Problemas:</strong> Capacidad analítica para desglosar sistemas complejos.</li>
+                <li><strong>Gestión de Proyectos:</strong> Estructuración de viabilidad, inversión y planificación de manufactura.</li>
+                <li><strong>Atención Especializada:</strong> Manejo de contingencias y comunicación asertiva bajo presión.</li>
+                <li><strong>Idiomas:</strong> Español (Nativo), Inglés, Alemán y Japonés (Nivel Básico).</li>
+            </ul>
         </div>
     </div>
 
-    <h3>Fortalezas y Debilidades</h3>
     <div class="grid-2">
         <div class="card">
             <h4>Fortalezas</h4>
             <ul>
-                <li>Pensamiento lógico-analítico para desglosar sistemas complejos y diagnosticar fallas.</li>
-                <li>Capacidad para trabajar bajo presión y mantener estándares óptimos de precisión en entornos de alta exigencia.</li>
-                <li>Adaptabilidad tecnológica acelerada para adoptar e integrar software y nuevos lenguajes.</li>
+                <li>Pensamiento lógico-analítico para la depuración de sistemas e incidencias.</li>
+                <li>Alto nivel de adaptabilidad tecnológica para la integración de software y hardware.</li>
+                <li>Manejo eficiente del estrés y tiempos de espera en atención directa al público.</li>
             </ul>
         </div>
-        <div class="card" style="border-left-color: #f59e0b;">
-            <h4>Debilidades (Área de Oportunidad)</h4>
-            <p>Mi trayectoria laboral inicial se ha consolidado principalmente dentro del sector gubernamental y administrativo, un área de oportunidad que actualmente compenso y nivelo activamente mediante el riguroso desarrollo técnico de proyectos prácticos de hardware y programación en la ingeniería.</p>
+        <div class="card alert-card">
+            <h4>Debilidades</h4>
+            <p>Mi trayectoria laboral inicial se ha consolidado principalmente dentro del sector gubernamental y administrativo, un área de oportunidad que actualmente compenso y nivelo activamente mediante el riguroso desarrollo técnico de proyectos prácticos de hardware e ingeniería.</p>
         </div>
     </div>
 
-    <h3>Matriz de Habilidades Técnicas</h3>
-    <div class="skills-grid">
-        <div class="skill-box">
-            <strong>Arquitectura y Diseño</strong>
-            C++, SQL, Entornos Visual Studio y Code::Blocks. Modelado 3D en SketchUp (VRML).
-        </div>
-        <div class="skill-box">
-            <strong>Gestión y Ofimática</strong>
-            Microsoft Excel, Word, PowerPoint y Publisher. Proyecciones financieras y bases de datos.
-        </div>
-        <div class="skill-box">
-            <strong>Documentación Técnica</strong>
-            Estructuración avanzada y rigor editorial de reportes técnicos utilizando LaTeX y Overleaf.
-        </div>
-        <div class="skill-box">
-            <strong>Edición y Multimedia</strong>
-            Procesamiento de imagen en Photoshop y postproducción de video técnico en Sony Vegas Pro.
-        </div>
+    <h3>Intereses</h3>
+    <div class="card">
+        <ul>
+            <li><strong>Automatización e Industria 4.0:</strong> Diseño e integración de sistemas robóticos aplicados a la manufactura y la optimización de procesos.</li>
+            <li><strong>Ecosistemas de Hardware Inteligente:</strong> Exploración de arquitecturas de dispositivos interconectados y tecnologías de usuario (IoT).</li>
+            <li><strong>Automovilismo de Alta Competición:</strong> Análisis de datos, telemetría y estrategias de ingeniería aplicadas a las carreras deportivas.</li>
+            <li><strong>Desarrollo de Tecnologías Asistivas:</strong> Creación de interfaces hombre-máquina, como sistemas portátiles y de exploración a distancia.</li>
+        </ul>
     </div>
 
+    <h3>Experiencia en Proyectos (Laborales y Académicos)</h3>
     <div class="grid-2">
-        <div>
-            <h3>Educación Continua</h3>
-            <ul>
-                <li><strong>Certificación CTRAC-01:</strong> Atención Ciudadana para Servidores Públicos. Optimización de procesos, legalidad y eficiencia procedimental (Acreditada en el primer periodo de 2026).</li>
-                <li><strong>Curso Formativo:</strong> El ABC de la igualdad y la no discriminación. Creación de entornos de trabajo inclusivos y normativos (Acreditado en mayo 2026).</li>
-            </ul>
+        <div class="card">
+            <h4>Auxiliar Operativo (Laboral)</h4>
+            <span>Tesorería de la CDMX | Mayo 2025 – Actualidad</span>
+            <p>Asesoría especializada a contribuyentes para obligaciones fiscales, gestión expedita de trámites y resolución sistemática de incidencias operativas en ventanilla aplicando principios de legalidad.</p>
         </div>
-        <div>
-            <h3>Competencias Lingüísticas</h3>
-            <ul>
-                <li><strong>Español:</strong> Nativo.</li>
-                <li><strong>Inglés:</strong> Nivel Básico (Lectura e interpretación de hojas de datos técnicos).</li>
-                <li><strong>Alemán:</strong> Nivel Básico.</li>
-                <li><strong>Japonés:</strong> Nivel Básico.</li>
-            </ul>
+        <div class="card">
+            <h4>Asistente de Oficina (Laboral)</h4>
+            <span>Empresa de Seguridad Privada | Ene 2020 – May 2021</span>
+            <p>Coordinación de soporte administrativo, monitoreo técnico de sistemas de videovigilancia y mantenimiento de bases de datos operativas con precisión técnica.</p>
+        </div>
+        <div class="card">
+            <h4>Proyecto Rovertok (Académico)</h4>
+            <span>Unidad de Exploración Móvil</span>
+            <p>Diseño arquitectónico de un rover, elaborando el plan de viabilidad técnica, estrategias de manufactura en serie y estructuración de tablas detalladas de inversión.</p>
+        </div>
+        <div class="card">
+            <h4>Proyecto Singbridge (Académico)</h4>
+            <span>Guante Interactivo Sensorizado</span>
+            <p>Desarrollo y programación de un guante técnico instrumentado con sensores. Diseño de arquitectura operativa independiente para una interfaz hombre-máquina precisa.</p>
         </div>
     </div>
 
-    <h3 style="margin-top: 40px;">Descargas</h3>
-    <a href="cv_luis_duran.pdf" download class="contact-card" style="margin-top: 20px; border-color: var(--accent); color: var(--accent);">
-        <span class="contact-icon">📄</span> Descargar Mi Currículum Completo (PDF)
-    </a>
-
-</div>
-
-<footer>
-    <div class="contact-grid">
-        <a href="mailto:luisjdr.robotica@email.com" class="contact-card">
-            <span class="contact-icon">✉️</span> luisjdr.robotica@email.com
-        </a>
-        <a href="https://github.com/JavRD4" target="_blank" class="contact-card">
-            <span class="contact-icon">🐱</span> github.com/JavRD4
-        </a>
-        <a href="https://linkedin.com/in/luis-j-duran" target="_blank" class="contact-card">
-            <span class="contact-icon">🔗</span> linkedin.com/in/luis-j-duran
-        </a>
-    </div>
-</footer>
-
-</body>
+</div> </body>
 </html>
-

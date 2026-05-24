@@ -25,7 +25,6 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        /* Encabezado con patrón de cuadrícula tipo "Plano de Ingeniería" */
         header {
             background-color: var(--primary);
             background-image: 
@@ -80,11 +79,6 @@
             background-color: var(--secondary);
             margin-right: 12px;
             border-radius: 4px;
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
         }
         .card {
             background: #ffffff;
@@ -162,8 +156,35 @@
             letter-spacing: 1px;
             text-transform: uppercase;
         }
-        @media (max-width: 768px) {
-            .grid-2 { grid-template-columns: 1fr; }
+
+        /* --- CORRECCIÓN DE FORMATO RESPONSIVO --- */
+
+        /* Estilos base para las grillas (mobile-first: stack una columna por defecto) */
+        .general-grid, .perfil-integral-cards-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        /* Ajuste de margen para la grilla general */
+        .general-grid {
+            margin-top: 20px;
+        }
+
+        /* En pantallas más anchas (tabletas/PC), activamos las columnas laterales */
+        @media (min-width: 768px) {
+            .general-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+            .perfil-integral-cards-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+        
+        /* Ajustes menores para contenedor en móvil */
+        @media (max-width: 767px) {
             .container { padding: 25px; margin-top: -30px; }
             header { padding: 50px 20px 80px 20px; }
         }
@@ -185,7 +206,7 @@
         Estudiante de Ingeniería en Robótica Industrial con interés en el desarrollo de soluciones tecnológicas, automatización y sistemas inteligentes. Cuento con experiencia en orientación y atención al público, así como en proyectos académicos enfocados en innovación tecnológica. Me caracterizo por ser una persona responsable, adaptable y comprometida con el aprendizaje continuo, el trabajo en equipo y el desarrollo de nuevas habilidades profesionales.
     </p>
 
-    <div class="grid-2">
+    <div class="general-grid">
         <div class="card">
             <h4>Misión</h4>
             <p>Aplicar mis conocimientos de Ingeniería en Robótica Industrial para desarrollar soluciones tecnológicas innovadoras y eficientes, contribuyendo al crecimiento industrial mediante la automatización, mejora continua y aprendizaje constante.</p>
@@ -197,7 +218,7 @@
     </div>
 
     <h3>Perfil Integral</h3>
-    <div class="grid-2">
+    <div class="perfil-integral-cards-container">
         <div class="card">
             <h4>Habilidades</h4>
             <ul>
@@ -238,9 +259,6 @@
                 <li>Capacidad de adaptación a nuevos entornos.</li>
             </ul>
         </div>
-    </div>
-
-    <div class="grid-2">
         <div class="card">
             <h4>Fortalezas</h4>
             <ul>
@@ -271,7 +289,7 @@
     </div>
 
     <h3>Educación Continua y Certificaciones</h3>
-    <div class="grid-2">
+    <div class="general-grid">
         <div class="card">
             <h4>Certificación CTRAC-01</h4>
             <span>Atención Ciudadana | 2026</span>
@@ -285,7 +303,7 @@
     </div>
 
     <h3>Experiencia Laboral Operativa</h3>
-    <div class="grid-2">
+    <div class="general-grid">
         <div class="card">
             <h4>Auxiliar Operativo</h4>
             <span>Tesorería de la CDMX | May 2025 – Actualidad</span>
@@ -299,7 +317,7 @@
     </div>
 
     <h3>Proyectos Académicos y de Ingeniería</h3>
-    <div class="grid-2">
+    <div class="general-grid">
         <div class="card">
             <h4>Proyecto Rovertok</h4>
             <ul>
@@ -331,4 +349,3 @@
 
 </body>
 </html>
-

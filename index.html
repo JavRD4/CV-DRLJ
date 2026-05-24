@@ -14,6 +14,10 @@
             --text-main: #334155;     /* Texto principal */
             --text-light: #64748b;    /* Texto secundario */
         }
+        /* Activamos el scroll suave para el menú */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg);
@@ -25,6 +29,65 @@
             flex-direction: column;
             min-height: 100vh;
         }
+        
+        /* --- ESTILOS DEL MENÚ OVERLAY --- */
+        .menu-btn {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+            z-index: 100;
+            transition: transform 0.2s;
+        }
+        .menu-btn:hover {
+            transform: scale(1.1);
+        }
+        .overlay-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(15, 23, 42, 0.98); /* Fondo oscuro semitransparente */
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .overlay-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 50px;
+            color: white;
+            cursor: pointer;
+            font-weight: 300;
+            line-height: 1;
+        }
+        .overlay-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 15px 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .overlay-menu a:hover {
+            color: var(--secondary);
+        }
+
         header {
             background-color: var(--primary);
             background-image: 
@@ -43,6 +106,7 @@
             font-weight: 800;
             letter-spacing: -1px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            padding: 0 40px; /* Espacio para que no choque con el menú */
         }
         header h2 {
             margin: 12px 0 0 0;
@@ -163,12 +227,23 @@
             .grid-2 { grid-template-columns: 1fr; gap: 0; }
             .container { padding: 25px; margin-top: -30px; }
             header { padding: 50px 20px 80px 20px; }
+            header h1 { font-size: 32px; padding: 0 30px; }
         }
     </style>
 </head>
 <body>
 
+<div class="overlay-menu" id="overlayMenu">
+    <div class="close-btn" onclick="toggleMenu()">×</div>
+    <a href="#mision-vision" onclick="toggleMenu()">Misión & Visión</a>
+    <a href="#perfil" onclick="toggleMenu()">Perfil Integral</a>
+    <a href="#experiencia" onclick="toggleMenu()">Experiencia</a>
+    <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
+</div>
+
 <header>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    
     <h1>Luis Javier Durán Rodríguez</h1>
     <h2>Estudiante de Ingeniería en Robótica Industrial</h2>
 </header>
@@ -182,7 +257,7 @@
         Estudiante de Ingeniería en Robótica Industrial con interés en el desarrollo de soluciones tecnológicas, automatización y sistemas inteligentes. Cuento con experiencia en orientación y atención al público, así como en proyectos académicos enfocados en innovación tecnológica. Me caracterizo por ser una persona responsable, adaptable y comprometida con el aprendizaje continuo, el trabajo en equipo y el desarrollo de nuevas habilidades profesionales.
     </p>
 
-    <div class="grid-2" style="margin-bottom: 20px;">
+    <div id="mision-vision" class="grid-2" style="margin-bottom: 20px;">
         <div class="card" style="margin-bottom: 0;">
             <h4>Misión</h4>
             <p>Aplicar mis conocimientos de Ingeniería en Robótica Industrial para desarrollar soluciones tecnológicas innovadoras y eficientes, contribuyendo al crecimiento industrial mediante la automatización, mejora continua y aprendizaje constante.</p>
@@ -193,7 +268,7 @@
         </div>
     </div>
 
-    <h3>Perfil Integral</h3>
+    <h3 id="perfil">Perfil Integral</h3>
     <div class="grid-2" style="margin-bottom: 20px;">
         <div class="card" style="margin-bottom: 0;">
             <h4>Habilidades</h4>
@@ -223,7 +298,7 @@
             <ul>
                 <li><strong>Robótica y Control:</strong> Sistemas inteligentes, automatización industrial y cinemática.</li>
                 <li><strong>Desarrollo de Software:</strong> C++, SQL, Visual Studio, Code::Blocks.</li>
-                <li><strong>Diseño y Modelado:</strong> SketchUp (VRML).</li>
+                <li><strong>Diseño y Modelado:</strong> SolidWorks, AutoCAD, SketchUp (VRML).</li>
                 <li><strong>Gestión y Ofimática:</strong> Análisis de costos, Excel, Word, PowerPoint, Publisher.</li>
                 <li><strong>Multimedia:</strong> Photoshop, Sony Vegas Pro.</li>
             </ul>
@@ -264,11 +339,11 @@
     <h3>Intereses</h3>
     <div class="card">
         <ul>
-            <li>Automatización industrial.</li>
-            <li>Robótica inteligente.</li>
-            <li>Inteligencia artificial aplicada.</li>
-            <li>Desarrollo tecnológico e innovación.</li>
-            <li>Sistemas industriales.</li>
+            <li><strong>Automatización industrial:</strong> Optimización de procesos de manufactura.</li>
+            <li><strong>Robótica inteligente:</strong> Integración de hardware y control.</li>
+            <li><strong>Inteligencia artificial aplicada:</strong> Soluciones para la Industria 4.0.</li>
+            <li><strong>Desarrollo e innovación:</strong> Creación de herramientas tecnológicas.</li>
+            <li><strong>Sistemas industriales:</strong> Gestión técnica y mejora continua.</li>
         </ul>
     </div>
 
@@ -286,7 +361,7 @@
         </div>
     </div>
 
-    <h3>Experiencia Laboral Operativa</h3>
+    <h3 id="experiencia">Experiencia Laboral Operativa</h3>
     <div class="grid-2">
         <div class="card" style="margin-bottom: 0;">
             <h4>Auxiliar Administrativo / Operativo</h4>
@@ -295,12 +370,12 @@
         </div>
         <div class="card" style="margin-bottom: 0;">
             <h4>Asistente de Oficina</h4>
-            <span>Empresa de Seguridad Privada | Ene 2020 – Mayo 2021</span>
+            <span>Empresa de Seguridad Privada | Ene 2020 – May 2021</span>
             <p style="text-align: justify; margin: 0;">Apoyo en actividades administrativas y atención a requerimientos internos de la organización. Participé en el monitoreo de sistemas de videovigilancia y control de accesos, además de la organización y mantenimiento de bases de datos operativas con precisión y confidencialidad.</p>
         </div>
     </div>
 
-    <h3>Proyectos Académicos y de Ingeniería</h3>
+    <h3 id="proyectos">Proyectos Académicos y de Ingeniería</h3>
     <div class="grid-2">
         <div class="card" style="margin-bottom: 0;">
             <h4>Proyecto Rovertok PEM</h4>
@@ -330,6 +405,12 @@
         Instituto Politécnico Nacional • 2026
     </p>
 </footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('overlayMenu').classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>

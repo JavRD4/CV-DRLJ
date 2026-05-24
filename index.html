@@ -81,12 +81,12 @@
             border-radius: 4px;
         }
         
-        /* LA SOLUCIÓN DEFINITIVA PARA LA CUADRÍCULA */
+        /* CUADRÍCULA CON TARJETAS DE ALTURA IGUAL */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-            align-items: start; /* Esto evita que las tarjetas cortitas se estiren */
+            /* Al quitar align-items: start, las tarjetas se estiran automáticamente para ser idénticas */
         }
 
         .card {
@@ -98,6 +98,8 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
             transition: all 0.3s ease;
+            height: 100%; /* Asegura que llene el espacio de la cuadrícula */
+            box-sizing: border-box;
         }
         .card:hover {
             transform: translateY(-4px);
@@ -190,20 +192,20 @@
         Estudiante de Ingeniería en Robótica Industrial con interés en el desarrollo de soluciones tecnológicas, automatización y sistemas inteligentes. Cuento con experiencia en orientación y atención al público, así como en proyectos académicos enfocados en innovación tecnológica. Me caracterizo por ser una persona responsable, adaptable y comprometida con el aprendizaje continuo, el trabajo en equipo y el desarrollo de nuevas habilidades profesionales.
     </p>
 
-    <div class="grid-2">
-        <div class="card">
+    <div class="grid-2" style="margin-bottom: 20px;">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Misión</h4>
             <p>Aplicar mis conocimientos de Ingeniería en Robótica Industrial para desarrollar soluciones tecnológicas innovadoras y eficientes, contribuyendo al crecimiento industrial mediante la automatización, mejora continua y aprendizaje constante.</p>
         </div>
-        <div class="card">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Visión</h4>
             <p>Convertirme en un profesional altamente capacitado en robótica y automatización industrial, participando en proyectos tecnológicos que aporten soluciones eficientes y generen impacto positivo en la industria.</p>
         </div>
     </div>
 
     <h3>Perfil Integral</h3>
-    <div class="grid-2">
-        <div class="card">
+    <div class="grid-2" style="margin-bottom: 20px;">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Habilidades</h4>
             <ul>
                 <li>Trabajo en equipo.</li>
@@ -213,7 +215,7 @@
                 <li>Organización y responsabilidad.</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Actitudes</h4>
             <ul>
                 <li>Actitud positiva ante nuevos retos.</li>
@@ -223,7 +225,10 @@
                 <li>Disposición para colaborar y apoyar.</li>
             </ul>
         </div>
-        <div class="card">
+    </div>
+
+    <div class="grid-2" style="margin-bottom: 20px;">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Conocimientos</h4>
             <ul>
                 <li><strong>Robótica y Control:</strong> Sistemas inteligentes, automatización industrial y cinemática.</li>
@@ -233,7 +238,7 @@
                 <li><strong>Multimedia:</strong> Photoshop, Sony Vegas Pro.</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Competencias</h4>
             <ul>
                 <li>Resolución de problemas tecnológicos.</li>
@@ -241,18 +246,23 @@
                 <li>Trabajo colaborativo.</li>
                 <li>Aprendizaje continuo.</li>
                 <li>Capacidad de adaptación a nuevos entornos.</li>
+                <li>Comunicación asertiva y manejo de situaciones bajo presión.</li>
             </ul>
         </div>
-        <div class="card">
+    </div>
+
+    <div class="grid-2">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Fortalezas</h4>
             <ul>
                 <li>Facilidad para aprender nuevas herramientas y tecnologías.</li>
                 <li>Responsabilidad y compromiso con las actividades asignadas.</li>
                 <li>Capacidad para trabajar en equipo.</li>
                 <li>Perseverancia para cumplir objetivos.</li>
+                <li>Pensamiento lógico-analítico enfocado en la obtención de resultados.</li>
             </ul>
         </div>
-        <div class="card alert-card">
+        <div class="card alert-card" style="margin-bottom: 0;">
             <h4>Debilidades</h4>
             <ul>
                 <li><strong>Perfeccionismo técnico:</strong> Suelo enfocarme demasiado en los detalles para asegurar la máxima calidad, lo que en ocasiones puede extender los tiempos de desarrollo.</li>
@@ -274,12 +284,12 @@
 
     <h3>Educación Continua y Certificaciones</h3>
     <div class="grid-2">
-        <div class="card">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Certificación CTRAC-01</h4>
             <span>Atención Ciudadana | 2026</span>
             <p>Acreditación oficial enfocada en la optimización de procesos, principios de legalidad y eficiencia procedimental en la atención directa al usuario.</p>
         </div>
-        <div class="card">
+        <div class="card" style="margin-bottom: 0;">
             <h4>El ABC de la Igualdad y la No Discriminación</h4>
             <span>Curso Formativo Institucional | May 2026</span>
             <p>Capacitación estratégica para la creación de entornos de trabajo inclusivos, éticos y apegados a las normativas de equidad actuales.</p>
@@ -288,12 +298,12 @@
 
     <h3>Experiencia Laboral Operativa</h3>
     <div class="grid-2">
-        <div class="card">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Auxiliar Operativo</h4>
             <span>Tesorería de la CDMX | May 2025 – Actualidad</span>
             <p>Asesoría especializada a contribuyentes para obligaciones fiscales, gestión expedita de trámites y resolución sistemática de incidencias operativas en ventanilla aplicando principios de legalidad.</p>
         </div>
-        <div class="card">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Asistente de Oficina</h4>
             <span>Empresa de Seguridad Privada | Ene 2020 – May 2021</span>
             <p>Coordinación de soporte administrativo, monitoreo técnico de sistemas de videovigilancia y mantenimiento de bases de datos operativas con precisión técnica.</p>
@@ -302,7 +312,7 @@
 
     <h3>Proyectos Académicos y de Ingeniería</h3>
     <div class="grid-2">
-        <div class="card">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Proyecto Rovertok</h4>
             <ul>
                 <li>Diseño y programación de un rover móvil.</li>
@@ -310,7 +320,7 @@
                 <li>Aplicación de conocimientos de automatización y control.</li>
             </ul>
         </div>
-        <div class="card">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Proyecto Singbridge</h4>
             <ul>
                 <li>Desarrollo y programación de un guante técnico instrumentado con sensores para la captura de variables físicas.</li>

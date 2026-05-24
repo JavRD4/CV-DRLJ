@@ -81,12 +81,10 @@
             border-radius: 4px;
         }
         
-        /* CUADRÍCULA CON TARJETAS DE ALTURA IGUAL */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-            /* Al quitar align-items: start, las tarjetas se estiran automáticamente para ser idénticas */
         }
 
         .card {
@@ -98,7 +96,7 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
             transition: all 0.3s ease;
-            height: 100%; /* Asegura que llene el espacio de la cuadrícula */
+            height: 100%; 
             box-sizing: border-box;
         }
         .card:hover {
@@ -145,13 +143,6 @@
         .photo-placeholder img:hover {
             transform: scale(1.03);
         }
-        .alert-card {
-            border-top-color: #64748b;
-            background-color: #f8fafc;
-        }
-        .alert-card:hover {
-            border-top-color: var(--primary);
-        }
         footer {
             background-color: var(--primary);
             color: #94a3b8;
@@ -168,7 +159,6 @@
             text-transform: uppercase;
         }
         
-        /* Ajuste para celulares */
         @media (max-width: 768px) {
             .grid-2 { grid-template-columns: 1fr; gap: 0; }
             .container { padding: 25px; margin-top: -30px; }
@@ -262,7 +252,7 @@
                 <li>Pensamiento lógico-analítico enfocado en la obtención de resultados.</li>
             </ul>
         </div>
-        <div class="card alert-card" style="margin-bottom: 0;">
+        <div class="card" style="margin-bottom: 0;">
             <h4>Debilidades</h4>
             <ul>
                 <li><strong>Perfeccionismo técnico:</strong> Suelo enfocarme demasiado en los detalles para asegurar la máxima calidad, lo que en ocasiones puede extender los tiempos de desarrollo.</li>
@@ -315,9 +305,9 @@
         <div class="card" style="margin-bottom: 0;">
             <h4>Proyecto Rovertok</h4>
             <ul>
-                <li>Diseño y programación de un rover móvil.</li>
-                <li>Integración de sensores para detección de obstáculos.</li>
-                <li>Aplicación de conocimientos de automatización y control.</li>
+                <li>Diseño arquitectónico y programación estructurada de una unidad rover móvil para tareas de exploración.</li>
+                <li>Integración de sistemas de sensores y control para la navegación y evasión autónoma de obstáculos.</li>
+                <li>Estructuración del plan de viabilidad técnica y aplicación de fundamentos de automatización industrial.</li>
             </ul>
         </div>
         <div class="card" style="margin-bottom: 0;">
@@ -335,7 +325,7 @@
 <footer>
     <p>
         <strong>Portafolio Web Integrador</strong><br><br>
-        Desarrollado para la materia de Administración Industrial<br>
+        Desarrollado para la materia de Administración Industrial II<br>
         Escuela Superior de Ingeniería Mecánica y Eléctrica (ESIME)<br>
         Instituto Politécnico Nacional • 2026
     </p>
